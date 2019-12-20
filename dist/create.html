@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html style="font-size:100px;">
+    <head>
+        <meta name="layout" content="main">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+        <meta name="author" content="胖纸，舒佳锦，q473658336@163.com" />
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/html2canvas.js"></script>
+        <script type="text/javascript" >
+        (function(f,j){var i=document,d=window;var b=i.documentElement;var c;function g(){var k=b.getBoundingClientRect().width;if(!j){j=1080}if(k>j){k=j}var l=k*100/f;b.style.fontSize=l>100?100:l+"px";}g();d.addEventListener("pageshow",function(k){if(k.persisted){clearTimeout(c);c=setTimeout(g,300)}},false)})(750,1080);
+        </script>
+        <script  type="text/javascript" >
+        $(document).ready( function(){
+                $(".example1").on("click", function(event) {
+                        if($(this).text()=='重新生成') window.location.href=window.location.href;
+                        event.preventDefault();
+                        html2canvas($("#area")[0], {
+                        allowTaint: true,
+                        taintTest: false,
+                        onrendered: function(canvas) {
+                            canvas.id = "mycanvas";
+                            //document.body.appendChild(canvas);
+                            //生成base64图片数据
+                            var dataUrl = canvas.toDataURL();
+                            var newImg = document.createElement("img");
+                            newImg.src =  dataUrl;
+                             $(".creat_area>.img_show").css({"height":"auto",'width':"4.734rem",'border':'0',"overflow":'hidden'});
+                             $(".creat_area").css({"overflow":'hidden'});
+                            $(".creat_area>.img_show").append($(newImg));
+                            $(".creat_area>p").html('生成成功，请长按图片保存！');
+                            $(".creat_area>input").remove();
+                            $(".example1").html('重新生成')
+                        }
+                    });
+                });
+               $(".creat_area").height($("#area").height());
+               $("#area>img").on('load',function(){
+                $(".creat_area").height($("#area").height());
+               })
+                $(".creat_area>input").bind("input",function(){
+                    $(".username>span").html($(this).val());
+                })
+
+        });
+
+        </script>
+        <title>装B预约iPhone 7高端黑！</title>
+        <style type='text/css'>
+            html,body{
+                font-family: '微软雅黑';
+                width: 100%;
+                height: auto;
+                margin:0px;
+                padding: 0px;
+                overflow: visible;
+            }
+            .main{
+                position: relative;
+                max-width: 720px;
+                height: auto;
+                margin:0 auto;
+                overflow: hidden;
+            }
+            #area{
+                position: relative;
+                width: 100%;
+                height: auto;
+                margin:0 auto;
+                padding: 0px;
+                text-align: center;
+                background-color: #fff;
+                z-index: 0;
+            }
+            #area>img{
+                margin:0;
+                display: block;
+                width: 100%;
+                height: auto;
+
+            }
+            .username{
+                height: 1.4rem;
+                line-height: 1.6rem;
+                font-family: PingFangSC-Regular;
+                font-size: 24px;
+                color: #038191;
+                letter-spacing: 0px;
+                text-align: center;
+
+                background-color: #fff;
+
+            }
+            .example1{
+
+                margin:auto;
+                font-size: 16px;
+                color: #3B3C4E;
+                letter-spacing: 0px;
+                width: 6rem;
+                height: .8rem;
+                line-height: .8rem;
+                background: #FFDD02;
+                border-radius: 8px;
+                text-align: center;
+                font-weight: bolder;
+                cursor: pointer;
+            }
+            .creat_area{
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                padding: 0 0 1.2rem 0;
+                width: 100%;
+                height: auto;
+                background-color: #3B3C4E;
+                overflow: auto;
+                z-index: 1;
+
+            }
+            .creat_area>input{
+                display: block;
+                margin:.6rem auto .8rem;
+                font-size: 16px;
+                padding: 0 .2rem;
+                letter-spacing: 0px;
+                box-sizing: border-box;
+                width: 6rem;
+                height: .8rem;
+                line-height: .8rem;
+                background: #FFFFFF;
+                border-radius: 8px;
+                border: 0;
+                outline: 0;
+            }
+            .img_show{
+                margin:1.6rem auto 0;
+                padding: 0;
+                width: 3.79rem;
+                height: 5.02rem;
+                background: #3B3C4E;
+                border: 1px dashed #606060;
+                border-radius: .16rem;
+                background: url('img/img_show_bg.png') no-repeat center;
+                background-size: 100%;
+            }
+            .img_show>img{
+                display: block;
+                width: 100%;
+                height: auto;
+                border: 1px dashed #606060;
+                border-radius: .16rem;
+            }
+            .creat_area>p{
+                margin-top: .7rem;
+                text-align: center;
+                font-size: 18px;
+                color: #E3958D;
+                letter-spacing: 0px;
+            }
+            .creat_area>a{
+                position: fixed;
+                top: 0;
+                display: block;
+                width:100%;
+                height: auto;
+            }
+            .creat_area>a>img{
+                width: 100%;
+                max-width: 720px;
+                height: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            <div id="area">
+                <img src="img/top.jpg">
+                <div class="username">预约人：<span>驴迹导游</span></div>
+                <img src="img/bottom.jpg">
+            </div>
+            <div></div>
+            <div class="creat_area">
+
+                <div class="img_show">
+
+                </div>
+                <p>预约iphone7 高端黑！</p>
+                <input type="text" placeholder="请输入预约人的姓名">
+                <div class="example1" >立即生成</div>
+            </div>
+        </div>
+
+    </body>
+</html>
